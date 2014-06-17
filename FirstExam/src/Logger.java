@@ -18,13 +18,13 @@ public class Logger {
 		this.level = level;
 	}
 
-	private void log(int level, String message) {
+	protected void log(int level, String message) {
 		if (level <= this.getLevel()) {
 			System.out.println(level + " => " + message);
 		}
 	}
 
-	private void log(String message) {
+	protected void log(String message) {
 		if (this.getLevel() >= 3) {
 			System.out.println(this.getLevel() + " => " + message);
 		}

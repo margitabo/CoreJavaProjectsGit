@@ -16,13 +16,15 @@ public class DateLogger extends Logger {
 		super();
 	}
 
-	private void log(int level, String message) {
+	protected void log(int level, String message) {
 		if (level <= this.getLevel()) {
 			System.out.println("|" + date + "| " + level + " => " + message);
 		}
+		
+		
 	}
 
-	private void log(String message) {
+	protected void log(String message) {
 		if (this.getLevel() >= 3) {
 			System.out.println("|" + date + "| " + level + this.getLevel()
 					+ " => " + message);
